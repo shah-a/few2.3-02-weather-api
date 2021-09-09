@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import RadioButton from '../RadioButton/RadioButton';
 
 const Weather = () => {
   const [code, setCode] = useState('');
@@ -30,38 +31,14 @@ const Weather = () => {
           <option value="standard">Kelvin</option>
         </select>
 
-        <label className="mt-1">
-          <input
-            type="radio"
+        {['metric', 'imperial', 'standard'].map((val) =>
+          <RadioButton
             name="unit"
-            className="mr-1"
-            checked={unit === 'metric'}
-            onChange={() => setUnit('metric')}
+            checked={unit === val}
+            onChange={() => setUnit(val)}
+            label={`${val[0].toUpperCase()}${val.slice(1)}`}
           />
-          Metric
-        </label>
-
-        <label className="mt-1">
-          <input
-            type="radio"
-            name="unit"
-            className="mr-1"
-            checked={unit === 'imperial'}
-            onChange={() => setUnit('imperial')}
-          />
-          Imperial
-        </label>
-
-        <label className="mt-1">
-          <input
-            type="radio"
-            name="unit"
-            className="mr-1"
-            checked={unit === 'standard'}
-            onChange={() => setUnit('standard')}
-          />
-          Standard
-        </label>
+        )}
       </form>
     </div>
   );
