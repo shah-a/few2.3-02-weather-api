@@ -36,7 +36,7 @@ const Weather = () => {
             name="unit"
             className="mr-1"
             checked={unit === 'metric'}
-            onClick={() => setUnit('metric')}
+            onChange={() => setUnit('metric')}
           />
           Metric
         </label>
@@ -47,7 +47,7 @@ const Weather = () => {
             name="unit"
             className="mr-1"
             checked={unit === 'imperial'}
-            onClick={() => setUnit('imperial')}
+            onChange={() => setUnit('imperial')}
           />
           Imperial
         </label>
@@ -58,7 +58,7 @@ const Weather = () => {
             name="unit"
             className="mr-1"
             checked={unit === 'standard'}
-            onClick={() => setUnit('standard')}
+            onChange={() => setUnit('standard')}
           />
           Standard
         </label>
