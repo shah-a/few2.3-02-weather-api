@@ -9,7 +9,7 @@ const fetchWeather = async (code, units, setData) => {
   const res = await fetch(urlBase + urlQuery);
   const data = await res.json();
 
-  setData(data);
+  data.cod === "404" ? setData(null) : setData(data);
 }
 
 export default fetchWeather;

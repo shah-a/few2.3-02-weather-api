@@ -1,4 +1,4 @@
-const RadioButton = (props) => {
+const UnitsRadio = (props) => {
   const { label, name, checked, onChange } = props;
 
   return (
@@ -15,4 +15,4 @@ const RadioButton = (props) => {
   );
 };
 
-export default RadioButton;
+export default UnitsRadio;
