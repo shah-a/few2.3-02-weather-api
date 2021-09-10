@@ -1,7 +1,9 @@
 const Footer = () => {
   return (
-    <footer className="Footer mt-auto p-14 text-white bg-gradient">
-      <p>&copy; Ali Shah, {new Date().getUTCFullYear()}</p>
+    <footer className="Footer mt-auto bg-gradient">
+      <a href="https://github.com/shah-a/few2.3-02-weather-api" target="_blank" rel="noreferrer">
+        <i className="fab fa-github-alt fa-3x p-10 text-white hover:text-gray-200"></i>
+      </a>
     </footer>
   );
 };
