@@ -2,7 +2,7 @@ const UnitsRadio = (props) => {
   const { label, name, checked, onChange } = props;
 
   return (
-    <label className="mt-1">
+    <label className="mb-1">
       <input
         type="radio"
         className="mr-1"

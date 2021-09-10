@@ -2,7 +2,7 @@ const CodeInput = (props) => {
   const { code, setCode } = props;
 
   return (
-    <div className="CodeInput mb-5">
+    <div className="CodeInput mb-3">
       <input
         type="text"
         placeholder="ZIP/Postal Code"
