@@ -4,7 +4,7 @@ const UnitsSelect = (props) => {
   return (
     <select
       value={units}
-      className="mb-3 p-2 border border-blue-500 rounded mr-auto"
+      className="mb-3 p-2 border rounded-lg mr-auto"
       onChange={(e) => setUnits(e.target.value)}
     >
       <option value="metric">Celsius</option>

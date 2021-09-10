@@ -9,13 +9,13 @@ const CodeInput = (props) => {
         placeholder="ZIP/Postal Code"
         pattern="^([A-Za-z]\d[A-Za-z])|(\d{5})$"
         maxLength="5"
-        className="p-2 border border-blue-500 rounded-l"
+        className="p-2 border rounded-l-lg"
         value={code}
         onChange={(e) => setCode(e.target.value)}
       />
       <button
         type="submit"
-        className="p-2 bg-blue-500 text-white border border-blue-500 rounded-r"
+        className="p-2 text-white bg-sky-500 hover:bg-sky-600 active:bg-sky-700 border rounded-r-lg"
       >
         Submit
       </button>
