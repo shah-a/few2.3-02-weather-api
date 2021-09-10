@@ -9,9 +9,6 @@ const fetchWeather = async (code, units, setData) => {
   const res = await fetch(urlBase + urlQuery);
   const data = await res.json();
 
-  console.log(units);
-  console.log(data);
-
   // If the status code begins with anything other than 2, then
   // `setData(null)`. Otherwise, `setData(data)`.
   data.cod.toString()[0] !== "2" ? setData(null) : setData({
