@@ -4,24 +4,24 @@
 
 @layer base {
   input {
-    accent-color: #22d3ee;
+    accent-color: #14b8a6;
   }
 }
 
 @layer components {
   .bg-gradient {
-    @apply bg-gradient-to-r from-cyan-400 to-sky-500;
+    @apply bg-gradient-to-r from-emerald-200 to-teal-300;
   }
 
   .bg-gradient-reverse {
-    @apply bg-gradient-to-r from-sky-500 to-cyan-400;
+    @apply bg-gradient-to-r from-teal-300 to-emerald-200;
   }
 
   .text-gradient {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-sky-500;
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-emerald-400 to-teal-500;
   }
 
   .text-gradient-reverse {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-sky-500 to-cyan-400;
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-teal-500 to-emerald-400;
   }
 }

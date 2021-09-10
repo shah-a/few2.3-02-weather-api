@@ -15,7 +15,7 @@ const CodeInput = (props) => {
       />
       <button
         type="submit"
-        className="p-2 text-white bg-sky-500 hover:bg-sky-600 active:bg-sky-700 border rounded-r-lg"
+        className="p-2 text-white bg-teal-500 hover:bg-teal-600 border rounded-r-lg"
       >
         Submit
       </button>
