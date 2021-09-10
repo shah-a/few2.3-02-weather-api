@@ -11,7 +11,7 @@ const Weather = () => {
   const [data, setData] = useState(null);
 
   return (
-    <div className="Weather"> {/* m-auto p-7 */}
+    <div className="Weather text-gray-700 sm:text-lg max-w-md mx-auto">
       <form
         onSubmit={(e) => {
           e.preventDefault();
