@@ -1,6 +1,7 @@
 {
   "name": "2.3-02-weather-api",
   "version": "0.1.0",
+  "homepage": "https://shah-a.github.io/few2.3-02-weather-api",
   "private": true,
   "scripts": {
     "start": "craco start",
