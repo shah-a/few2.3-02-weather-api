@@ -1,3 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  input {
+    accent-color: #22d3ee;
+  }
+}
+
+@layer components {
+  .bg-gradient {
+    @apply bg-gradient-to-r from-sky-500 to-cyan-400;
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-sky-500 to-cyan-400;
+  }
+}

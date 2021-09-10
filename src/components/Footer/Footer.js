@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <footer className="Footer mt-auto p-14 text-white bg-blue-500">
+    <footer className="Footer mt-auto p-14 text-white bg-gradient">
       <p>&copy; Ali Shah, {new Date().getUTCFullYear()}</p>
     </footer>
   );
