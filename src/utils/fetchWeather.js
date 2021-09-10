@@ -9,7 +9,11 @@ const fetchWeather = async (code, units, setData) => {
   const res = await fetch(urlBase + urlQuery);
   const data = await res.json();
 
-  data.cod === "404" ? setData(null) : setData(data);
+  console.log(data.cod);
+
+  // If the status code begins with anything other than 2, then
+  // `setData(null)`. Otherwise, `setData(data)`.
+  data.cod.toString()[0] !== "2" ? setData(null) : setData(data);
 }
 
 export default fetchWeather;
