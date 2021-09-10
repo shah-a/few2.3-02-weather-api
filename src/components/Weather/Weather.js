@@ -11,9 +11,8 @@ const Weather = () => {
   const [data, setData] = useState(null);
 
   return (
-    <div className="Weather m-auto">
+    <div className="Weather m-auto p-7">
       <form
-        className="flex flex-col"
         onSubmit={(e) => {
           e.preventDefault();
           fetchWeather(code, units, setData);

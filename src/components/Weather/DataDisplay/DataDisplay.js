@@ -4,18 +4,20 @@ const DataDisplay = (props) => {
   if (data) {
     return (
       <div className="DataDisplay mb-3">
-        <h1 className="text-5xl mb-3 w-full text-blue-500 font-bold">{code.toUpperCase()}</h1>
-        <p>Temp: {data.temp}</p>
-        <p>Feels like: {data.feelsLike}</p>
-        <p>Description: {data.description}</p>
+        <h1 className="text-5xl mb-3 text-blue-500 font-bold">{code.toUpperCase() || "Enter code:"}</h1>
+        <p>Temp: <strong>{data.temp}</strong></p>
+        <p>Feels like: <strong>{data.feelsLike}</strong></p>
+        <p>Description: <strong>{data.description}</strong></p>
       </div>
     );
   }
 
   return (
     <div className="DataDisplay mb-3">
-      <h1 className="text-5xl mb-7 w-full text-blue-500 font-bold">{code.toUpperCase() || "Enter a code:"}</h1>
-      <p>no data</p>
+      <h1 className="text-5xl mb-3 text-blue-500 font-bold">{code.toUpperCase() || "Enter code:"}</h1>
+      <p>Temp: <strong>N/A</strong></p>
+      <p>Feels like: <strong>N/A</strong></p>
+      <p>Description: <strong>N/A</strong></p>
     </div>
   );
 };
