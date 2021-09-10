@@ -13,8 +13,9 @@ const DataDisplay = (props) => {
   }
 
   return (
-    <div className="DataDisplay">
+    <div className="DataDisplay mb-3">
       <h1 className="text-5xl mb-7 w-full text-blue-500 font-bold">{code.toUpperCase() || "Enter a code:"}</h1>
+      <p>no data</p>
     </div>
   );
 };
