@@ -4,9 +4,10 @@ const DataDisplay = (props) => {
   if (data) {
     return (
       <div className="DataDisplay">
-        <h1 className="text-5xl mb-5">Weather in:</h1>
-        <h1 className="text-5xl mb-10 w-full text-blue-500 font-bold">{code}</h1>
-        <p>{data.weather[0].description}</p>
+        <h1 className="text-5xl mb-3 w-full text-blue-500 font-bold">{code}</h1>
+        <p>Temp: {data.temp}</p>
+        <p>Feels like: {data.feelsLike}</p>
+        <p>Description: {data.description}</p>
         <p className="mb-5">Selected Units: {`${units[0].toUpperCase()}${units.slice(1)}`}</p>
       </div>
     );
@@ -14,10 +15,7 @@ const DataDisplay = (props) => {
 
   return (
     <div className="DataDisplay">
-      <h1 className="text-5xl mb-5">Weather in:</h1>
-      <h1 className="text-5xl mb-10 w-full text-blue-500 font-bold">{code}</h1>
-      <p>no data</p>
-      <p className="mb-5">Selected Units: {`${units[0].toUpperCase()}${units.slice(1)}`}</p>
+      <h1 className="text-5xl mb-10 w-full text-blue-500 font-bold">{code || "Enter a code:"}</h1>
     </div>
   );
 };
