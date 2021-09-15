@@ -1,13 +1,11 @@
 const fetchWeather = async (code, units, setData) => {
-  const apiKey = process.env.REACT_APP_API_KEY;
-
   code = new RegExp(/([a-z]\d[a-z])/i).test(code) ? `${code},ca` : code;
 
-  const urlBase = process.env.REACT_APP_URL_BASE;
-  const urlQuery = `?zip=${code}&appid=${apiKey}&units=${units}`
+  const urlBase = 'http://localhost:3000/weather';
+  const urlQuery = `?code=${code}&units=${units}`;
 
-  const res = await fetch(urlBase + urlQuery);
-  const data = await res.json();
+  let data = await fetch(urlBase + urlQuery);
+  data = await data.json();
 
   // If the status code begins with anything other than 2, then
   // `setData(null)`. Otherwise, `setData(data)`.
