@@ -1,7 +1,7 @@
 const fetchWeather = async (code, units, setData) => {
   code = new RegExp(/([a-z]\d[a-z])/i).test(code) ? `${code},ca` : code;
 
-  const urlBase = 'http://localhost:3000/weather';
+  const urlBase = process.env.REACT_APP_URL_BASE;
   const urlQuery = `?code=${code}&units=${units}`;
 
   let data = await fetch(urlBase + urlQuery);
