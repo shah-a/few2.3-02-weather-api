@@ -1,6 +1,7 @@
 {
   "name": "2.3-02-weather-api-frontend",
   "version": "0.1.0",
+  "homepage": ".",
   "private": true,
   "scripts": {
     "start": "craco start",
