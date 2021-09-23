@@ -21,4 +21,8 @@ const fetchWeather = async (code, units, setData) => {
   });
 }
 
-export default fetchWeather;
+const fetchWeatherGeo = async (units, setData) => {
+  await new Promise((res) => setTimeout(res, 1500));
+};
+
+export { fetchWeather, fetchWeatherGeo };
