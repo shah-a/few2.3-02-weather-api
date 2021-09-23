@@ -9,17 +9,20 @@ const Weather = () => {
   const [code, setCode] = useState('');
   const [units, setUnits] = useState('metric');
   const [data, setData] = useState(null);
+  const [loading, setLoading] = useState(false);
 
   return (
     <div className="Weather text-gray-700 sm:text-lg max-w-md mx-auto">
       <form
-        onSubmit={(e) => {
+        onSubmit={async (e) => {
           e.preventDefault();
-          fetchWeather(code, units, setData);
+          setLoading(true);
+          await fetchWeather(code, units, setData);
+          setLoading(false);
         }}
       >
         <DataDisplay code={code} units={units} data={data} />
-        <CodeInput code={code} setCode={setCode} />
+        <CodeInput code={code} setCode={setCode} loading={loading} />
         <UnitsSelect units={units} setUnits={setUnits} />
         {['metric', 'imperial', 'standard'].map((val) =>
           <UnitsRadio
