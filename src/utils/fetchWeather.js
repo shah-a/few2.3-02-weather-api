@@ -9,16 +9,18 @@ const fetchWeather = async (code, units, setData) => {
   const headers = { 'Content-Type': 'application/json' };
   const body = JSON.stringify({ urlBase, urlQuery });
 
-  let data = await fetch(fetchUrl, { method, headers, body });
-  data = await data.json();
-
-  // If the status code begins with anything other than 2, then
-  // `setData(null)`. Otherwise, `setData(data)`.
-  data.cod.toString()[0] !== '2' ? setData(null) : setData({
-    temp: data.main.temp,
-    feelsLike: data.main.feels_like,
-    description: data.weather[0].description
-  });
+  await fetch(fetchUrl, { method, headers, body })
+    .then((data) => data.json())
+    .then((data) => {
+      // If the status code begins with anything other than 2, then
+      // `setData(null)`. Otherwise, `setData(data)`.
+      data.cod.toString()[0] !== '2' ? setData(null) : setData({
+        temp: data.main.temp,
+        feelsLike: data.main.feels_like,
+        description: data.weather[0].description
+      });
+    })
+    .catch(() => alert('Error! Something went wrong.'));
 }
 
 const fetchWeatherGeo = async (units, setData) => {
@@ -43,16 +45,18 @@ const fetchWeatherGeo = async (units, setData) => {
   const headers = { 'Content-Type': 'application/json' };
   const body = JSON.stringify({ urlBase, urlQuery });
 
-  let data = await fetch(fetchUrl, { method, headers, body });
-  data = await data.json();
-
-  // If the status code begins with anything other than 2, then
-  // `setData(null)`. Otherwise, `setData(data)`.
-  data.cod.toString()[0] !== '2' ? setData(null) : setData({
-    temp: data.main.temp,
-    feelsLike: data.main.feels_like,
-    description: data.weather[0].description
-  });
+  await fetch(fetchUrl, { method, headers, body })
+    .then((data) => data.json())
+    .then((data) => {
+      // If the status code begins with anything other than 2, then
+      // `setData(null)`. Otherwise, `setData(data)`.
+      data.cod.toString()[0] !== '2' ? setData(null) : setData({
+        temp: data.main.temp,
+        feelsLike: data.main.feels_like,
+        description: data.weather[0].description
+      });
+    })
+    .catch(() => alert('Error! Something went wrong.'));
 };
 
 export { fetchWeather, fetchWeatherGeo };
